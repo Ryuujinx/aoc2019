@@ -12,7 +12,7 @@ def execute_opcode(intcode,pointer):
     return intcode,pointer,status
 
 input = open("input", "r")
-intcode = input.split(",")
+intcode = input.read().split(",")
 incode = [ int(x) for x in intcode ]
 intcode[1] = 12
 intcode[2] = 2

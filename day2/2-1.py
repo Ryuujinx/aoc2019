@@ -7,11 +7,11 @@ def execute_opcode(intcode,pointer):
     elif intcode[pointer] == 2:
         intcode[pointer +3 ] = int(intcode[pointer + 1]) * int(intcode[pointer + 2])
         status = True
-    else
+    else:
         status = False
     return intcode,pointer,status
 
-input = open("intcode", "r")
+input = open("input", "r")
 intcode = input.split(",")
 incode = [ int(x) for x in intcode ]
 intcode[1] = 12
@@ -20,5 +20,6 @@ status = True
 pointer = 0
 while status:
     intcode,pointer,status = execute_opcode(intcode, pointer)
+    print(intcode)
 
 print(intcode[0])

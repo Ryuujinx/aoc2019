@@ -79,4 +79,5 @@ for xy_pair in intersections:
         smol_boi = abs(int(x)) + abs(int(y))
     
 
+print(intersections)
 print(smol_boi)
